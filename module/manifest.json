@@ -1,0 +1,7 @@
+{
+	"description": "My module template",
+	"min_platform_version": "v2.1.5",
+	"namespace": "background_geolocation",
+	"platform_version": "v2.1.5",
+	"version": "0.2.0"
+}

@@ -1,0 +1,70 @@
+[
+  {
+    "do": {
+      "android_add_permission": {
+        "permission": "android.permission.RECEIVE_BOOT_COMPLETED"
+      }
+    }
+  },
+  {
+    "do": {
+      "android_add_permission": {
+        "permission": "android.permission.WRITE_EXTERNAL_STORAGE"
+      }
+    }
+  },
+  {
+    "do": {
+      "android_add_permission": {
+        "permission": "android.permission.ACCESS_FINE_LOCATION"
+      }
+    }
+  },
+  {
+    "do": {
+      "android_add_permission": {
+        "permission": "android.permission.ACCESS_NETWORK_STATE"
+      }
+    }
+  },
+  {
+    "do": {
+      "android_add_to_application_manifest": {
+        "element": {
+          "tag": "receiver",
+          "attributes": {
+            "android:name": ".LocationLoggerServiceManager",
+            "android:enabled": "true",
+            "android:exported": "false",
+            "android:label": "LocationLoggerServiceManager"
+          },
+          "children": [
+            {
+              "tag": "intent-filter",
+              "children": [
+                {
+                  "tag": "action",
+                  "attributes": {
+                    "android:name": "android.intent.action.BOOT_COMPLETED"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      }
+    }
+  },
+  {
+    "do": {
+      "android_add_to_application_manifest": {
+        "element": {
+          "tag": "receiver",
+          "attributes": {
+            "android:name": ".LocationReceiver"
+          }
+        }
+      }
+    }
+  }
+]
