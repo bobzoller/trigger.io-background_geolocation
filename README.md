@@ -1,4 +1,4 @@
-# background_geolocation
+# trigger.io-background_geolocation
 
 A [Trigger.io](http://trigger.io/) module for battery-efficient listening of geolocation change events.
 
